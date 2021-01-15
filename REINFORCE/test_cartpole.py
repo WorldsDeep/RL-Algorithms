@@ -1,4 +1,4 @@
-from reinforce import Pi, train
+from Policy import Pi, train
 import gym
 import numpy as np
 import torch
@@ -12,7 +12,8 @@ def main():
     in_dim=env.observation_space.shape[0]
     out_dim = env.action_space.n
     pi = Pi(in_dim, out_dim)
-    optimizer = optim.Adam(pi.parameters(), lr=0.01)
+    optimizer = optim.Adam(pi.parameters(), lr=0.01)
+
     for epi in range(400):
         state = env.reset()
         for t in range(200):
@@ -24,7 +25,8 @@ def main():
                 break
         loss = train(pi, optimizer)
         total_reward = sum(pi.rewards)
-        solved = total_reward > 195.0
+        solved = total_reward > 195.0
+
         pi.onpolicy_reset()
         print(f'Episode {epi}, loss: {loss}, \
         total_reward: {total_reward}, solved:{solved}')
