@@ -4,4 +4,4 @@
 </p>
 
 ## References
-- Williams, R.J. Simple statistical gradient-following algorithms for connectionist reinforcement learning. *Mach Learn* 8, 229–256 (1992). https://doi.org/10.1007/BF00992696
+1.  Williams, R.J. Simple statistical gradient-following algorithms for connectionist reinforcement learning. *Mach Learn* 8, 229–256 (1992). https://doi.org/10.1007/BF00992696
